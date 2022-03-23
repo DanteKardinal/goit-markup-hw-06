@@ -16,6 +16,7 @@
   --text-color-white: #ffffff;
   --backdrop-bgc: rgba(0, 0, 0, 0.2);
   --white-bgc: #ffffff;
+  --blue-bgc: #2196f3;
 
   --card-set-gap: 30px;
   --animation-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -60,8 +61,17 @@ img {
 }
 .button {
   font-family: inherit;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
   cursor: pointer;
   border: none;
+  color: var(--button-text-color);
+  background-color: var(--blue-bgc);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 .container {
   margin-left: auto;
@@ -246,7 +256,6 @@ img {
 
 /* Основной контент страницы */
 /* Секция hero с заказом услуг */
-
 .overlay {
   background-color: #c4c4c4;
 }
@@ -287,15 +296,6 @@ img {
   padding-bottom: 10px;
   padding-left: 32px;
   min-width: 200px;
-
-  background-color: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.06em;
-  color: var(--button-text-color);
 }
 /* Секция Наши преимущества */
 .about-section {
@@ -562,6 +562,49 @@ img {
 }
 /* Footer Форма подписки */
 .container-subscription {
+}
+.form-title {
+  margin-bottom: 20px;
+
+  text-transform: uppercase;
+  letter-spacing: var(--primary-letter-spacing);
+  color: var(--text-color-white);
+}
+.footer-form {
+  display: flex;
+}
+.footer-email-input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+
+  /* identical to box height, or 125% */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  width: 358px;
+  padding-left: 16px;
+
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
+  border-radius: 4px;
+}
+.footer-btn-subscrib {
+  display: flex;
+  justify-content: center;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 12px;
+  min-width: 200px;
+}
+.icon-subscribe {
+  margin-left: 10px;
+  fill: var(--social-link-fill);
 }
 
 /* ПОРТФОЛИО */
