@@ -525,9 +525,9 @@ img {
   color: var(--hover-cont-link);
 }
 /* Социальные сети футера */
-/* .footer-social {
-
-} */
+.footer-social {
+  margin-right: 93px;
+}
 .footer-social-title {
   margin-bottom: 20px;
 
@@ -559,6 +559,9 @@ img {
 .footer-link-social:hover,
 .footer-link-social:focus {
   background-color: var(--hover-cont-link);
+}
+/* Footer Форма подписки */
+.container-subscription {
 }
 
 /* ПОРТФОЛИО */
