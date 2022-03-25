@@ -163,11 +163,18 @@ textarea {
   fill: #000000;
 }
 /* Форма в модальном окне для Заказа услуг */
+/* SVG иконки в форме */
+.label-svg-form-studio {
+  position: relative;
+}
+.svg-form {
+  position: absolute;
+}
+
 .modal-form-order {
   display: flex;
   flex-direction: column;
 }
-
 .container-chexbox-order {
   display: flex;
 }
@@ -176,7 +183,9 @@ textarea {
   line-height: 1.71;
   letter-spacing: var(--primary-letter-spacing);
 }
-
+.link-policy {
+  color: var(--hover-cont-link);
+}
 .btn-modal-form-order {
   width: 200px;
   padding-top: 10px;
