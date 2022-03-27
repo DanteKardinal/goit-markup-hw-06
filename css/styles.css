@@ -164,12 +164,18 @@ textarea {
 }
 /* Форма в модальном окне для Заказа услуг */
 /* SVG иконки в форме */
-.label-svg-form-studio {
+.form-field {
   position: relative;
+  display: block;
 }
 .svg-form {
   position: absolute;
-  text-align: right;
+  top: 45%;
+  left: 3%;
+  transform: translateY(-50%);
+
+  width: 18px;
+  height: 18px;
 }
 
 .modal-form-order {
@@ -190,8 +196,10 @@ textarea {
 .input-form-orfer {
   padding-top: 11px;
   padding-bottom: 11px;
-  padding-left: 12px;
+  padding-left: 42px;
   margin-bottom: 4px;
+
+  width: 100%;
 }
 .container-chexbox-order {
   display: flex;
