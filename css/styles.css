@@ -111,8 +111,10 @@ textarea {
 .nav-link.nav-current {
   color: var(--hover-cont-link);
 }
-.nav-item.nav-item-current::after {
+.nav-link.nav-current::after {
   content: '';
+  margin-top: 28px;
+
   display: block;
   width: 100%;
   height: 4px;
@@ -163,9 +165,13 @@ textarea {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: var(--white-bgc);
-}
-.modal-icon {
   fill: #000000;
+
+  transition: fill var(--animation-transition);
+}
+.btn-close-modal:hover,
+.btn-close-modal:focus {
+  fill: var(--form-order-focus-fill);
 }
 
 /* Форма в модальном окне для Заказа услуг */
@@ -194,16 +200,14 @@ textarea {
   margin-bottom: 4px;
 }
 
-.input-form-orfer {
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-
-  transition: border var(--animation-transition);
+.input-form-order {
+  display: block;
+  padding-left: 42px;
 }
-.input-form-orfer:focus {
+.input-form-order:focus {
   border: 1px solid var(--border-form-color);
 }
-.input-form-orfer:focus + .svg-form {
+.input-form-order:focus + .svg-form {
   fill: var(--form-order-focus-fill);
 }
 /* SVG иконки в форме */
@@ -213,34 +217,64 @@ textarea {
 }
 .svg-form {
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 12px;
   transform: translateY(-50%);
 
   transition: fill var(--animation-transition);
 }
-
-/* Кастомизация форм с вводом информации */
-.input-form-orfer {
+/* Кастомизация input */
+.input-form-order {
   padding-top: 11px;
+  padding-right: 12px;
   padding-bottom: 11px;
   padding-left: 12px;
 
   width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border var(--animation-transition);
+}
+.input-form-order:not(:last-child) {
+  padding-left: 42px;
 }
 /* Checkbox с принятием рассылки и соглашения */
-.container-chexbox-order {
+.text-checkbox-order {
   display: flex;
   justify-content: center;
+  align-items: center;
 
   margin-bottom: 30px;
-}
-.text-checkbox-order {
   font-weight: 400;
   line-height: 1.71;
   letter-spacing: var(--primary-letter-spacing);
 }
+.checkbox-policy {
+  appearance: none;
+  position: absolute;
+}
+.svg-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid #212121;
+  border-radius: 4px;
+  margin-right: 7px;
+
+  transition: border-color var(--animation-transition), background-color var(--animation-transition),
+    background-image var(--animation-transition);
+}
+.checkbox-policy:checked + .svg-checkbox {
+  border-color: transparent;
+  background-color: var(--blue-bgc);
+  background-image: url(../images/svg/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
 .link-policy {
+  text-decoration: underline;
   color: var(--hover-cont-link);
 }
 
@@ -253,6 +287,12 @@ textarea {
   padding-left: 55px;
   margin-right: auto;
   margin-left: auto;
+
+  transition: background-color var(--animation-transition);
+}
+.btn-modal-form-order:hover,
+.btn-modal-form-order:focus {
+  background-color: #188ce8;
 }
 
 /* Стили шапки */
@@ -307,7 +347,6 @@ textarea {
 .nav-link {
   display: block;
   padding-top: 32px;
-  padding-bottom: 28px;
 
   font-weight: 500;
   font-size: 14px;
@@ -320,6 +359,9 @@ textarea {
 .nav-link:hover,
 .nav-link:focus {
   color: var(--hover-cont-link);
+}
+.nav-link:not(.nav-current) {
+  padding-bottom: 28px;
 }
 
 /* Каналы связи со студией */
@@ -392,6 +434,13 @@ textarea {
   padding-bottom: 10px;
   padding-left: 32px;
   min-width: 200px;
+
+  background-color: var(--blue-bgc);
+  transition: background-color var(--animation-transition);
+}
+.primary-button:hover,
+.primary-button:focus {
+  background-color: #188ce8;
 }
 /* Секция Наши преимущества */
 .about-section {
