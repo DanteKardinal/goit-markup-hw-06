@@ -273,6 +273,9 @@ textarea {
   background-size: contain;
   background-origin: border-box;
 }
+.checkbox-policy:focus + .svg-checkbox {
+  border-color: var(--blue-bgc);
+}
 .link-policy {
   text-decoration: underline;
   color: var(--hover-cont-link);
